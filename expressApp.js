@@ -1,11 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var _ = require('lodash');
+var config = require('config');
 
 var app = express();
-var port = 8081;
 
-app.listen(port);
+app.listen(config.port);
 app.use(bodyParser.json());
 
 var taskList = [];
