@@ -1,5 +1,5 @@
-var http = require("http");
-var port = 8081;
+const http = require("http");
+const port = 8081;
 
 http.createServer(requestListener).listen(port);
 console.log("Sever is listening on port:", port);

@@ -1,14 +1,15 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var _ = require('lodash');
-var config = require('config');
+const express = require('express');
+const bodyParser = require('body-parser');
+const _ = require('lodash');
+const config = require('config');
 
-var app = express();
+const app = express();
 
 app.listen(config.port);
 app.use(bodyParser.json());
 
 var taskList = [];
+
 app.get('/list', function(req, res){
     res.send(taskList);
 });
