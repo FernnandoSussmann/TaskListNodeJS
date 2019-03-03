@@ -1,8 +1,8 @@
-var chai = require('chai'),
+const chai = require('chai'),
     expect = chai.expect,
     should = chai.should();
-var request = require('request');
-var config = require('config');
+const request = require('request');
+const config = require('config');
 
 //Using config module to create a local domain
 GLOBAL.domain = 'http://' + config.host + ':' + config.port;

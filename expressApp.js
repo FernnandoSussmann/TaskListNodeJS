@@ -15,19 +15,19 @@ app.get('/list', function(req, res){
 });
 
 app.post('/task', [validationMiddleware, function(req,res){
-    var task = req.body.task
+    let task = req.body.task
     taskList.push(task);
     res.send(taskList);
 }]);
 
 app.put('/task/:task_index', [validationMiddleware, function(req, res){
-    var taskIndex = req.params.task_index;
+    let taskIndex = req.params.task_index;
     taskList[taskIndex] = req.body.task
     res.send(taskList);
 }]);
 
 app.delete('/task/:task_index', function(req, res){
-    var taskIndex = req.params.task_index;
+    let taskIndex = req.params.task_index;
     taskList.splice(taskIndex, 1)
     res.send(taskList);
 });
